@@ -2,15 +2,65 @@
 
 <head>
 
+  <script>
+    (function(d) {
+      var config = {
+          kitId: 'gqo3qos',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function() {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function() {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+
   <link rel="stylesheet" href="./css/style.scss">
 </head>
 
 <body>
 
   <main>
-    <div class="point">
-      <img src="./image/point1.svg" alt="">
-    </div>
+
+
+
+    <section>
+      <div class="plea">
+        <img class="plea-bg" src="./image/plea-bg.svg" alt="">
+        <h1>我們需要<b>500萬人</b><br/>在11/24日，投下<br/><b>不同意票</b><br/>才能阻止核四又來了公投。<br/>阻止危險核四，拒絕過期發電!</h1>
+      </div>
+    </section>
+
+
+    <section class="wants">
+      <header>
+        <img class="header-img" src="./image/header-nonuke.svg" alt="">
+        <h1>我們要的能源轉型！</h1>
+      </header>
+    </section>
+
+
+
+
+
   </main>
 
 </body>

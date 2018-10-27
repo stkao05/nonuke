@@ -2,6 +2,18 @@
 
 
 $main-color: #F8CD47;
+$section-spacing: 30px;
+
+
+@mixin font-regular() {
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-bold() {
+  font-style: normal;
+  font-weight: 700;
+}
 
 
 * {
@@ -9,8 +21,10 @@ $main-color: #F8CD47;
   outline: 1px solid red;
 }
 
+
 body {
   background-color: $main-color;
+  font-family: source-han-sans-traditional, serif;
 }
 
 main {
@@ -18,9 +32,70 @@ main {
   margin: 0 auto;
 }
 
+section {
+  margin-bottom: $section-spacing;
+}
+
+h1 {
+  @include font-bold();
+}
+
+.header-img {
+  width: 200px;
+}
+
+.plea {
+  color: white;
+  padding: 30px;
+  width: 550px;
+  margin: 0 auto 100px auto;
+  position: relative;
+
+  .plea-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    z-index: -1;
+  }
+
+  h1 {
+    line-height: 1.5em;
+    font-size: 30px;
+    transform: skewY(-10deg);
+    text-align: center;
+
+    @include font-bold();
+
+    b {
+      font-size: 40px;
+      @include font-bold();
+    }
+  }
+}
+
+.wants {
+
+  header {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      transform: rotate(-5deg);
+      margin-left: 50px;
+    }
+
+    img {
+    }
+  }
+
+
+}
+
+
 .point {
   img {
     width: 100px;
   }
-
 }
