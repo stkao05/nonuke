@@ -1,4 +1,26 @@
+@import "./normalize.scss";
 
-h1  {
-  color: red;
+
+$main-color: #F8CD47;
+
+
+* {
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+body {
+  background-color: $main-color;
+}
+
+main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.point {
+  img {
+    width: 100px;
+  }
+
 }
