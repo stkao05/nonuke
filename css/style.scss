@@ -3,6 +3,10 @@
 $main-color: #F8CD47;
 $section-spacing: 30px;
 
+@mixin card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
 @mixin font-regular {
   font-style: normal;
   font-weight: 400;
@@ -22,9 +26,14 @@ body {
   font-family: source-han-sans-traditional, serif;
 }
 
+p {
+  font-size: 15px;
+}
+
 main {
-  width: 80%;
   margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1000px;
 }
 
 section {
@@ -35,8 +44,38 @@ h1 {
   @include font-bold;
 }
 
+em {
+  @include font-bold;
+}
+
 .header-img {
   width: 200px;
+}
+
+.doyouknow {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 200px;
+  }
+
+  .doyouknow-left {
+    p {
+      font-size: 20px;
+      transform: rotate(-5deg) translate(-20px, 0px);
+    }
+  }
+
+  .doyouknow-right {
+    background-color: white;
+    width: 400px;
+    margin-left: 30px;
+    border-radius: 30px;
+    padding: 30px;
+
+    @include card;
+  }
 }
 
 .plea {
@@ -89,10 +128,9 @@ h1 {
     $item-margin: 30px;
 
     list-style: none;
-    width: 2 * ($item-width + 2 * $item-margin) + 20px;;
+    width: 2 * ($item-width + 2 * $item-margin) + 20px;
     margin: 0 auto;
     padding: 0;
-
 
     li {
       width: 450px;
@@ -131,12 +169,33 @@ h1 {
     .want-box {
       background-color: white;
       border-radius: 30px;
-
       padding: 20px 100px 20px 60px;
       height: 150px;
       max-width: 400px;
+      @include card;
     }
-
   }
 }
 
+.card {}
+
+.qa {
+  border: 20px solid $main-color;
+  border-radius: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 30px;
+  background-color: white;
+}
+
+.qa-content {
+  padding: 0 30px;
+
+  p {
+    font-size: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
