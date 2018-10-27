@@ -1,26 +1,21 @@
 @import "./normalize.scss";
 
-
 $main-color: #F8CD47;
 $section-spacing: 30px;
 
-
-@mixin font-regular() {
+@mixin font-regular {
   font-style: normal;
   font-weight: 400;
 }
 
-@mixin font-bold() {
+@mixin font-bold {
   font-style: normal;
   font-weight: 700;
 }
 
-
 * {
   box-sizing: border-box;
-  outline: 1px solid red;
 }
-
 
 body {
   background-color: $main-color;
@@ -28,7 +23,7 @@ body {
 }
 
 main {
-  width: 1200px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -37,7 +32,7 @@ section {
 }
 
 h1 {
-  @include font-bold();
+  @include font-bold;
 }
 
 .header-img {
@@ -66,17 +61,17 @@ h1 {
     transform: skewY(-10deg);
     text-align: center;
 
-    @include font-bold();
+    @include font-bold;
 
     b {
       font-size: 40px;
-      @include font-bold();
+
+      @include font-bold;
     }
   }
 }
 
 .wants {
-
   header {
     display: flex;
     align-items: center;
@@ -86,16 +81,62 @@ h1 {
       margin-left: 50px;
     }
 
-    img {
+    img {}
+  }
+
+  ul {
+    $item-width: 450px;
+    $item-margin: 30px;
+
+    list-style: none;
+    width: 2 * ($item-width + 2 * $item-margin) + 20px;;
+    margin: 0 auto;
+    padding: 0;
+
+
+    li {
+      width: 450px;
+      position: relative;
+      display: inline-block;
+      margin: 30px;
     }
+
+    img {
+      height: 160px;
+      position: absolute;
+      top: 50%;
+      margin-top: -80px;
+      right: 0;
+    }
+
+    h5 {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 50px;
+      margin: 0px;
+      line-height: 1em;
+    }
+
+    h6 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    small {
+      font-size: 20px;
+      padding-left: 100px;
+    }
+
+    .want-box {
+      background-color: white;
+      border-radius: 30px;
+
+      padding: 20px 100px 20px 60px;
+      height: 150px;
+      max-width: 400px;
+    }
+
   }
-
-
 }
 
-
-.point {
-  img {
-    width: 100px;
-  }
-}
