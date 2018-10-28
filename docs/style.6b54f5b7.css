@@ -330,6 +330,70 @@ template {
   display: none;
 }
 
+.details-reset > summary {
+  list-style: none;
+}
+.details-reset > summary::before {
+  display: none;
+}
+.details-reset > summary::-webkit-details-marker {
+  display: none;
+}
+
+details-dialog {
+  position: fixed;
+  margin: 10vh auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  max-height: 80vh;
+  max-width: 90vw;
+  width: 448px;
+}
+
+.details-with-dialog[open] > summary:before {
+  content: " ";
+  background: rgba(0, 0, 0, 0.3);
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.anim-fade-in.fast {
+  animation-duration: 300ms;
+}
+
+.anim-fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+/********** site style ************/
+.qa-details {
+  background-color: white;
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+.qa-details summary {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.qa-dialog {
+  width: 70%;
+  border: 20px solid #F8CD47;
+  border-radius: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 30px;
+  background-color: white;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -337,6 +401,7 @@ template {
 body {
   background-color: #F8CD47;
   font-family: source-han-sans-traditional, serif;
+  padding-bottom: 500px;
 }
 
 p {
@@ -350,7 +415,7 @@ main {
 }
 
 section {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 h1 {
@@ -550,6 +615,10 @@ em {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+.qa-section-head {
+  margin-bottom: 50px;
+}
+
 .qa {
   border: 20px solid #F8CD47;
   border-radius: 30px;
@@ -567,4 +636,17 @@ em {
 .qa-content img {
   max-width: 100%;
   margin-top: 30px;
+}
+
+.qa-list-head .qa-list-girl {
+  width: 150px;
+  display: inline-block;
+}
+.qa-list-head h3 {
+  font-size: 50px;
+  display: inline-block;
+  position: relative;
+  top: -60px;
+  left: 30px;
+  transform: rotate(-5deg);
 }

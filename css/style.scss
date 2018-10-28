@@ -1,21 +1,8 @@
 @import "./normalize.scss";
+@import "./detail-dialog.scss";
+@import "./variables.scss";
 
-$main-color: #F8CD47;
-$section-spacing: 30px;
-
-@mixin card {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-@mixin font-regular {
-  font-style: normal;
-  font-weight: 400;
-}
-
-@mixin font-bold {
-  font-style: normal;
-  font-weight: 700;
-}
+$section-spacing: 50px;
 
 * {
   box-sizing: border-box;
@@ -24,6 +11,8 @@ $section-spacing: 30px;
 body {
   background-color: $main-color;
   font-family: source-han-sans-traditional, serif;
+
+	padding-bottom: 500px;
 }
 
 p {
@@ -281,7 +270,11 @@ em {
   }
 }
 
-.card {}
+.qa-section-head {
+
+  margin-bottom: 50px;
+
+}
 
 .qa {
   border: 20px solid $main-color;
@@ -301,5 +294,21 @@ em {
   img {
     max-width: 100%;
     margin-top: 30px;
+  }
+}
+
+.qa-list-head {
+  .qa-list-girl {
+    width: 150px;
+    display: inline-block;
+  }
+
+  h3 {
+    font-size: 50px;
+    display: inline-block;
+    position: relative;
+    top: -60px;
+    left: 30px;
+    transform: rotate(-5deg);
   }
 }
