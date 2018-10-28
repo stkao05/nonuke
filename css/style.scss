@@ -334,6 +334,7 @@ section.partner {
 
   .partner-map {
     $w: 400px;
+
     display: block;
     width: $w;
     margin: 0 auto;
@@ -378,4 +379,14 @@ section.partner {
   }
 }
 
+.section-links {
+  a {
+    width: 33%;
+    display: inline-block;
+  }
 
+  img {
+    width: 150px;
+    margin: 0 auto;
+  }
+}
