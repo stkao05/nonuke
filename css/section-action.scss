@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+
+.section-action {
+  .section-header-img {
+    float: left;
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 230px;
+  }
+
+  li {
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+		min-width: 220px;
+
+    a {
+      display: block;
+      @include font-bold;
+      font-size: 30px;
+    }
+
+  }
+
+}
