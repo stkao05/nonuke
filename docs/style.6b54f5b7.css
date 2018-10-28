@@ -367,6 +367,88 @@ em {
   width: 200px;
 }
 
+.main-banner {
+  position: relative;
+  height: 100%;
+}
+.main-banner .logo {
+  width: 320px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.main-banner .header-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 20px 40px 20px;
+  width: 400px;
+}
+.main-banner .header-text h1 {
+  font-size: 45px;
+  color: white;
+  text-align: center;
+}
+.main-banner .header-text h1 em {
+  font-size: 60px;
+}
+.main-banner .header-text .bg {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: skewY(-10deg);
+  background-color: #00AC60;
+}
+.main-banner .hand {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -250px;
+  width: 500px;
+}
+.main-banner .side-header {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: white;
+  border-radius: 30px;
+  padding: 0 50px;
+}
+.main-banner .splash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 500px;
+  margin-top: -250px;
+  margin-left: -500px;
+}
+.main-banner .can-cluster {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+}
+.main-banner .can-cluster .can {
+  width: 170px;
+  display: inline-block;
+}
+.main-banner .can-cluster .can-1 {
+  transform: rotate(-5deg) translate(0px, 0px);
+}
+.main-banner .can-cluster .can-2 {
+  transform: rotate(-8deg) translate(10px, 0px);
+  z-index: 1;
+}
+.main-banner .can-cluster .can-3 {
+  transform: rotate(10deg) translate(-8px, 0px);
+  z-index: 2;
+}
+
 .doyouknow {
   display: flex;
   justify-content: center;
