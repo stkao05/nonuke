@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "parcel --out-dir ./docs ./index.njk",
         "prebuild": "rm -rf docs",
-        "build": "parcel build --public-url ../nonuke --out-dir ./docs ./index.html"
+        "build": "parcel build --public-url ../nonuke --out-dir ./docs ./index.njk"
     },
     "author": "",
     "license": "ISC",
