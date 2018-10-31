@@ -1,6 +1,8 @@
 $main-color: #F8CD47;
-
 $link-color: #FF328B;
+
+
+
 
 
 @mixin card {
@@ -17,3 +19,8 @@ $link-color: #FF328B;
   font-weight: 700;
 }
 
+@mixin header-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50;
+}

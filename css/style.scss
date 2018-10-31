@@ -46,6 +46,16 @@ em {
   @include font-bold;
 }
 
+.h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45;
+
+  em {
+    font-size: 70;
+  }
+}
+
 .section-header-img {
   width: 200px;
 }
@@ -293,8 +303,38 @@ em {
   background-color: white;
 }
 
+.qa header {
+  display: flex;
+  justify-content: space-between;
+
+  .qa-number {
+    color: #D8C9B8;
+    font-size: 140px;
+    line-height: 1em;
+    position: relative;
+    top: 0;
+    left: 50px;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  h1 {
+    border-bottom: dotted 6px #6C6E70;
+    padding-bottom: 1em;
+
+    @include header-text;
+  }
+
+  h2 {
+    @include font-regular;
+  }
+}
+
+
 .qa-content {
-  padding: 0 30px;
+  padding: 0 50px;
 
   p {
     font-size: 20px;
