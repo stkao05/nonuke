@@ -1,6 +1,21 @@
 <details class="qa-details details-reset details-with-dialog">
-    <summary>{% block summary %}{% endblock %}</summary>
+    <summary class="js-detail-summary">{% block summary %}{% endblock %}</summary>
     <details-dialog class="anim-fade-in fast qa-dialog">
-        {% block details %}{% endblock %}
+        <article class="qa card {% block class %}{% endblock %}">
+            <header>
+                <div class="left">
+                    <div class="qa-number">{% block number %}{% endblock %}</div>
+                    <img class="section-header-img" src="./image/label-really.svg" alt="" />
+                </div>
+
+                <div class="right">
+                    <h1 class="h1">{% block headline %}{% endblock %}</h1>
+                    <h2>{% block sub_headline %}{% endblock %}</h2>
+                </div>
+            </header>
+            <div class="qa-content">
+            {% block content %}{% endblock %}
+            </div>
+        </article>
     </details-dialog>
 </details>
