@@ -438,6 +438,7 @@ body.dialog-on {
   text-align: right;
 }
 .qa header h1 {
+  margin-top: 0;
   border-bottom: dotted 6px #6C6E70;
   padding-bottom: 1em;
   font-style: normal;
