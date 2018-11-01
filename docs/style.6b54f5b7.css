@@ -405,9 +405,9 @@ body.dialog-on {
 }
 .section-action li a {
   display: block;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
 }
 
 .qa-section-head {
@@ -420,6 +420,7 @@ body.dialog-on {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 30px;
   background-color: white;
+  margin-bottom: 20px;
 }
 
 .qa header {
@@ -446,15 +447,26 @@ body.dialog-on {
   font-size: 50;
 }
 .qa header h2 {
+  text-align: left;
   font-style: normal;
   font-weight: 400;
-  text-align: left;
+  font-size: 20px;
 }
 
 .qa-content {
   padding: 0 50px;
 }
 
+@media (max-width: 600px) {
+  .qa {
+    padding: 20px;
+    border: 0px solid #F8CD47;
+  }
+
+  .qa-content {
+    padding: 0px 0px;
+  }
+}
 .card-graph {
   margin-top: 30px;
   width: 100%;
@@ -491,12 +503,31 @@ p {
   font-size: 20px;
 }
 
+h1 {
+  font-style: normal;
+  font-weight: 700;
+}
+
+em {
+  font-style: normal;
+  font-weight: 700;
+}
+
 .highlight-head {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   color: #F15A24;
   margin-bottom: 0.5em;
+}
+
+.h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45;
+}
+.h1 em {
+  font-size: 70;
 }
 
 a {
@@ -514,27 +545,13 @@ main {
   padding-bottom: 100px;
 }
 
+@media (max-width: 600px) {
+  main {
+    padding: 0 15px;
+  }
+}
 section {
   margin-bottom: 50px;
-}
-
-h1 {
-  font-style: normal;
-  font-weight: 700;
-}
-
-em {
-  font-style: normal;
-  font-weight: 700;
-}
-
-.h1 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 45;
-}
-.h1 em {
-  font-size: 70;
 }
 
 .section-header-img {
@@ -545,6 +562,13 @@ em {
   margin-bottom: 100px;
 }
 
+@media (max-width: 600px) {
+  .section header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .main-banner {
   position: relative;
   height: 100%;
@@ -683,6 +707,16 @@ em {
 .wants header h1 {
   transform: rotate(-5deg);
   margin-left: 50px;
+}
+@media (max-width: 500px) {
+  .wants header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wants header h1 {
+    transform: rotate(0deg);
+  }
 }
 .wants ul {
   list-style: none;

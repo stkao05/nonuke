@@ -8,6 +8,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 30px;
   background-color: white;
+  margin-bottom: 20px;
 }
 
 .qa header {
@@ -36,8 +37,8 @@
   }
 
   h2 {
-    @include font-regular;
     text-align: left;
+    @include regular-text;
   }
 }
 
@@ -45,6 +46,18 @@
 .qa-content {
   padding: 0 50px;
 }
+
+@media (max-width: 600px) {
+  .qa {
+    padding: 20px;
+    border: 0px solid $main-color;
+  }
+
+  .qa-content {
+    padding: 0px 0px;
+  }
+}
+
 
 .card-graph {
   margin-top: 30px;

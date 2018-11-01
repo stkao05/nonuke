@@ -6,6 +6,8 @@
 
 $section-spacing: 50px;
 
+$break-small: 500px;
+
 * {
   box-sizing: border-box;
 }
@@ -13,6 +15,7 @@ $section-spacing: 50px;
 body {
   background-color: $main-color;
   font-family: source-han-sans-traditional, serif;
+
   @include regular-text;
 }
 
@@ -20,10 +23,29 @@ p {
   @include regular-text;
 }
 
+h1 {
+  @include font-bold;
+}
+
+em {
+  @include font-bold;
+}
+
 .highlight-head {
   @include regular-text;
+
   color: #F15A24;
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45;
+
+  em {
+    font-size: 70;
+  }
 }
 
 a {
@@ -42,26 +64,14 @@ main {
   padding-bottom: 100px;
 }
 
+@media (max-width: 600px) {
+  main {
+    padding: 0 15px;
+  }
+}
+
 section {
   margin-bottom: $section-spacing;
-}
-
-h1 {
-  @include font-bold;
-}
-
-em {
-  @include font-bold;
-}
-
-.h1 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 45;
-
-  em {
-    font-size: 70;
-  }
 }
 
 .section-header-img {
@@ -70,6 +80,14 @@ em {
 
 .section {
   margin-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+  .section header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .main-banner {
@@ -241,7 +259,15 @@ em {
       margin-left: 50px;
     }
 
-    img {}
+    @media (max-width: $break-small) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        transform: rotate(0deg);
+      }
+    }
   }
 
   ul {

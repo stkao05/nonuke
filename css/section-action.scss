@@ -21,8 +21,8 @@
 
     a {
       display: block;
-      @include font-bold;
       font-size: 30px;
+      @include font-bold;
     }
 
   }
