@@ -1,74 +1,68 @@
 @import "./variables.scss";
 
-body.detail-on {
+body.dialog-on {
   overflow: hidden;
 }
 
-.details-reset {
-	// Remove marker added by the display: list-item browser default
-	> summary {
-		list-style: none;
-	}
+.details-dialog {
+  .dialog {
+    display: none;
+  }
 
-	// Remove marker added by details polyfill
-	> summary::before {
-		display: none;
-	}
+  .overlay {
+    display: none;
+  }
 
-	// Remove marker added by Chrome
-	> summary::-webkit-details-marker {
-		display: none;
-	}
-}
+  &.on {
+    .dialog-close {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
 
-details-dialog {
-	position: fixed;
-	margin: 10vh auto;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 999;
-	max-height: 80vh;
-	max-width: 90vw;
-	width: 448px;
+    .dialog {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      overflow: auto;
+    }
 
-	z-index: 100;
-  overflow: auto;
-}
-
-.details-with-dialog[open] > summary:before {
-	content: " ";
-	background: rgba(0, 0, 0, 0.3);
-	display: block;
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-}
-
-.anim-fade-in.fast {
-	animation-duration: 300ms;
-}
-
-.anim-fade-in {
-	animation-name: fade-in;
-	animation-duration: 1s;
-	animation-timing-function: ease-in-out;
+    .overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  }
 }
 
 /********** site style ************/
 
-.qa-details {
-	background-color: white;
-	padding: 1em;
-  margin-bottom: 0.5em;
-
-	summary {
-    @include font-bold;
+.details-dialog {
+  .dialog-content {
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 20px;
   }
 }
 
-.qa-dialog {
-	width: 70%;
+.summary {
+  background-color: white;
+  padding: 0.5em 1em;
+  cursor: pointer;
+
+  @include regular-bold;
 }

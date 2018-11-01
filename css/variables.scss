@@ -24,3 +24,9 @@ $link-color: #FF328B;
   font-weight: 700;
   font-size: 50;
 }
+
+@mixin regular-bold {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20;
+}
