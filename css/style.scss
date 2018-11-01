@@ -13,10 +13,17 @@ $section-spacing: 50px;
 body {
   background-color: $main-color;
   font-family: source-han-sans-traditional, serif;
+  @include regular-text;
 }
 
 p {
-  font-size: 15px;
+  @include regular-text;
+}
+
+.highlight-head {
+  @include regular-text;
+  color: #F15A24;
+	margin-bottom: 0.5em;
 }
 
 a {

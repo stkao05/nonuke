@@ -36,16 +36,13 @@
 
   h2 {
     @include font-regular;
+    text-align: left;
   }
 }
 
 
 .qa-content {
   padding: 0 50px;
-
-  p, li {
-    font-size: 20px;
-  }
 }
 
 .card-graph {

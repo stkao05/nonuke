@@ -63,6 +63,7 @@ body.dialog-on {
   background-color: white;
   padding: 0.5em 1em;
   cursor: pointer;
+	margin-bottom: 0.5em;
 
   @include regular-bold;
 }
