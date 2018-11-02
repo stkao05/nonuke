@@ -745,7 +745,7 @@ p, ul {
 }
 @media (max-width: 650px) {
   p, ul {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
@@ -765,6 +765,9 @@ em {
 @media (max-width: 650px) {
   .h1 {
     font-size: 30px;
+  }
+  .h1 em {
+    font-size: 50px;
   }
 }
 
