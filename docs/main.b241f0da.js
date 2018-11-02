@@ -5,4 +5,4 @@ var e=require("./closest");function t(e,t,n,o,l){var u=r.apply(this,arguments);r
 },{"./closest":"2ZlY"}],"d6sW":[function(require,module,exports) {
 "use strict";var e=s(require("./delegate")),a=s(require("./closest"));function s(e){return e&&e.__esModule?e:{default:e}}function l(e,a){return e.classList?e.classList.contains(a):!!e.className.match(new RegExp("(\\s|^)"+a+"(\\s|$)"))}function t(e,a){e.classList?e.classList.add(a):l(e,a)||(e.className+=" "+a)}function i(e,a){if(e.classList)e.classList.remove(a);else if(l(e,a)){var s=new RegExp("(\\s|^)"+a+"(\\s|$)");e.className=e.className.replace(s," ")}}(0,e.default)(".details-dialog .summary","click",function(e){t(document.body,"dialog-on"),t((0,a.default)(e.delegateTarget,".details-dialog"),"on")},!1),(0,e.default)(".details-dialog .overlay, .details-dialog .dialog-close","click",function(e){i((0,a.default)(e.delegateTarget,".details-dialog"),"on"),i(document.body,"dialog-on")},!1);
 },{"./delegate":"QPDd","./closest":"2ZlY"}]},{},["d6sW"], null)
-//# sourceMappingURL=../nonuke/main.b241f0da.map
+//# sourceMappingURL=/main.b241f0da.map
