@@ -14,13 +14,21 @@ body.dialog-on {
   }
 
   &.on {
-    .dialog-close {
+    .dialog-close, .dialog-close-dark {
       position: fixed;
       top: 20px;
       right: 20px;
       width: 30px;
       height: 30px;
       cursor: pointer;
+    }
+
+    .dialog-close-dark {
+      display: none;
+
+      @media (max-width: $break-small) {
+        display: block;
+      }
     }
 
     .dialog {
@@ -54,8 +62,13 @@ body.dialog-on {
 .details-dialog {
   .dialog-content {
     width: 80vw;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 20px;
+
+    @media (max-width: $break-small) {
+      width: 95vw;
+    }
   }
 }
 

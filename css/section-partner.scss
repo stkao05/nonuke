@@ -1,0 +1,96 @@
+@import "./variables.scss";
+
+section.partner {
+  position: relative;
+  padding-bottom: 150px;
+
+  @media (max-width: $break-small) {
+    padding-bottom: 200px;
+  }
+
+  .section-header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (max-width: $break-small) {
+      position: static;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  .partner-map {
+    $w: 400px;
+
+    display: block;
+    width: $w;
+    margin: 0 auto;
+    position: relative;
+    left: -50px;
+
+    @media (max-width: $break-small) {
+      width: 300px;
+      left: -50;
+    }
+  }
+
+  .partner-promo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @media (max-width: $break-small) {
+      bottom: -80px;
+    }
+
+    h4 {
+      background-color: white;
+      padding: 0.5em 1em;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    img {
+      width: 200px;
+
+      @media (max-width: $break-small) {
+        width: 150px;
+      }
+    }
+  }
+
+  .partner-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 48px;
+
+    img {
+      display: block;
+      width: 200px;
+    }
+
+    em {
+      font-size: 80px;
+    }
+
+    @media (max-width: $break-small) {
+      top: 350px;
+      right: -20px;
+      font-size: 30px;
+
+      img {
+        width: 130px;
+      }
+
+      em {
+        font-size: 60px;
+      }
+    }
+  }
+}

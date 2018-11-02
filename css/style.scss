@@ -3,32 +3,50 @@
 @import "./variables.scss";
 @import "./section-action.scss";
 @import "./section-cards.scss";
-
-$section-spacing: 50px;
-
-$break-small: 500px;
+@import "./section-wants.scss";
+@import "./section-partner.scss";
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  @include regular-text;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
+  max-width: 100%;
   background-color: $main-color;
   font-family: source-han-sans-traditional, serif;
-
   @include regular-text;
 }
 
-p {
+p, ul {
   @include regular-text;
-}
 
-h1 {
-  @include font-bold;
+  @media (max-width: $break-small) {
+    font-size: 15px;
+  }
 }
 
 em {
   @include font-bold;
+}
+
+.h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+
+  em {
+    font-size: 70px;
+  }
+
+  @media (max-width: $break-small) {
+    font-size: 30px;
+  }
 }
 
 .highlight-head {
@@ -36,16 +54,6 @@ em {
 
   color: #F15A24;
   margin-bottom: 0.5em;
-}
-
-.h1 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 45;
-
-  em {
-    font-size: 70;
-  }
 }
 
 a {
@@ -82,17 +90,21 @@ section {
   margin-bottom: 100px;
 }
 
-@media (max-width: 600px) {
-  .section header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.section > header {
+  margin-bottom: 40px;
+
+  @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
   }
 }
 
 .main-banner {
   position: relative;
   height: 100%;
+  display: none;
 
   .logo {
     width: 320px;
@@ -249,87 +261,14 @@ section {
   }
 }
 
-.wants {
-  header {
-    display: flex;
-    align-items: center;
-
-    h1 {
-      transform: rotate(-5deg);
-      margin-left: 50px;
-    }
-
-    @media (max-width: $break-small) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      h1 {
-        transform: rotate(0deg);
-      }
-    }
-  }
-
-  ul {
-    $item-width: 450px;
-    $item-margin: 30px;
-
-    list-style: none;
-    width: 2 * ($item-width + 2 * $item-margin) + 20px;
-    margin: 0 auto;
-    padding: 0;
-
-    li {
-      width: 450px;
-      position: relative;
-      display: inline-block;
-      margin: 30px;
-    }
-
-    img {
-      height: 160px;
-      position: absolute;
-      top: 50%;
-      margin-top: -80px;
-      right: 0;
-    }
-
-    h5 {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 50px;
-      margin: 0px;
-      line-height: 1em;
-    }
-
-    h6 {
-      font-size: 32px;
-      margin: 0;
-    }
-
-    small {
-      font-size: 20px;
-      padding-left: 100px;
-    }
-
-    .want-box {
-      background-color: white;
-      border-radius: 30px;
-      padding: 20px 100px 20px 60px;
-      height: 150px;
-      max-width: 400px;
-
-      @include card;
-    }
-  }
-}
 
 .label-img {
   width: 200px;
 }
 
 .qa-list-head {
+  position: relative;
+
   .qa-list-girl {
     width: 150px;
     display: inline-block;
@@ -342,80 +281,40 @@ section {
     top: -160px;
     left: 30px;
     transform: rotate(-5deg);
+
+    @media (max-width: $break-small) {
+      position: static;
+    }
+  }
+
+  .label-worry {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+
   }
 
   .label-question {
-    position: relative;
-    top: -100px;
-    left: -80px;
+    position: absolute;
+    top: 0px;
+    left: 70%;
   }
 }
 
-section.partner {
-  position: relative;
-  padding-bottom: 150px;
-
-  .section-header-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .partner-map {
-    $w: 400px;
-
-    display: block;
-    width: $w;
-    margin: 0 auto;
-    position: relative;
-    left: -50px;
-  }
-
-  .partner-promo {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    h4 {
-      background-color: white;
-      padding: 0.5em 1em;
-    }
-
-    a {
-      color: black;
-      text-decoration: none;
-    }
-
-    img {
-      width: 200px;
-    }
-  }
-
-  .partner-count {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 48px;
-
-    img {
-      display: block;
-      width: 200px;
-    }
-
-    em {
-      font-size: 80px;
-    }
-  }
-}
 
 .section-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   a {
-    width: 33%;
+    width: 30%;
+    max-width: 150px;
     display: inline-block;
   }
 
   img {
-    width: 150px;
+    width: 100%;
     margin: 0 auto;
   }
 }
