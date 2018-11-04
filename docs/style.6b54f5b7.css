@@ -722,20 +722,17 @@ section.partner .partner-count em {
 }
 
 html {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: source-han-sans-traditional, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
-  max-width: 100%;
+  width: 100%;
   background-color: #F8CD47;
-  font-family: source-han-sans-traditional, serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
 }
 
 p, ul {
@@ -752,6 +749,14 @@ p, ul {
 em {
   font-style: normal;
   font-weight: 700;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: #FF328B;
 }
 
 .h1 {
@@ -779,28 +784,17 @@ em {
   margin-bottom: 0.5em;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-}
-a:hover {
-  color: #FF328B;
-}
-
 main {
+  display: block;
   margin: 0 auto;
   padding: 0 30px;
   max-width: 1000px;
   padding-bottom: 100px;
 }
-
 @media (max-width: 600px) {
   main {
     padding: 0 15px;
   }
-}
-section {
-  margin-bottom: 50px;
 }
 
 .section-header-img {
