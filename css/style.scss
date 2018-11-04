@@ -1,6 +1,7 @@
 @import "./normalize.scss";
 @import "./detail-dialog.scss";
 @import "./variables.scss";
+@import "./section-doyouknow.scss";
 @import "./section-action.scss";
 @import "./section-cards.scss";
 @import "./section-wants.scss";
@@ -102,64 +103,6 @@ main {
 }
 
 
-.doyouknow {
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: $break-small) {
-    flex-direction: column;
-  }
-
-  img {
-    width: 200px;
-
-    @media (max-width: $break-small) {
-      margin-right: -240px;
-    }
-  }
-
-  .doyouknow-left {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    p {
-      display: inline-block;
-      font-size: 20px;
-
-      @media (min-width: $break-small) {
-        transform: rotate(-5deg) translate(-20px, 0px);
-      }
-
-      @media (max-width: $break-small) {
-        transform: rotate(-4deg) translate(0px, 0px);
-        text-align: left;
-        position: relative;
-      }
-    }
-  }
-
-  .doyouknow-right {
-    background-color: white;
-    border-radius: 30px;
-    padding: 30px;
-
-    @include card;
-
-    @media (min-width: $break-small) {
-      width: 400px;
-      margin-left: 30px;
-    }
-
-    @media (max-width: $break-small) {
-      width: 90%;
-      margin: 0 auto;
-    }
-  }
-
-
-
-}
 
 .plea {
   color: white;
