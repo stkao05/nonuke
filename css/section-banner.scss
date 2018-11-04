@@ -1,0 +1,174 @@
+@import "./variables.scss";
+
+.main-banner {
+  position: relative;
+  height: 100%;
+
+  .slogan {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 65vh;
+    transform: translate(-50%, 0);
+  }
+
+  .headline {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 1.5em;
+    text-align: center;
+
+    span {
+      background-color: $main-color;
+    }
+  }
+
+  .side-slogan {
+    width: 25%;
+    position: absolute;
+    top: -10%;
+    right: 0;
+  }
+
+  .header-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 20px 40px 20px;
+    width: 400px;
+
+    h1 {
+      font-size: 45px;
+      color: white;
+      text-align: center;
+
+      em {
+        font-size: 60px;
+      }
+    }
+
+    .bg {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transform: skewY(-10deg);
+      background-color: #00AC60;
+    }
+  }
+
+  .hand {
+    width: 25%;
+    position: absolute;
+    left: 50px;
+    bottom: 25%;
+  }
+
+  .side-header {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0 50px;
+  }
+
+  .splash {
+    $wh_ratio: 800 / 400;
+    $w: 1000px;
+    $h: $w / $wh_ratio;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $w;
+    height: $h;
+    margin-top: -0.5 * $h;
+    margin-left: -0.5 * $w;
+  }
+
+  $can-w: 10%;
+
+  .can {
+    width: 10%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .cluster-position {
+    position: relative;
+    height: 100%;
+  }
+
+  .can-cluster-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    z-index: -1;
+
+    .can-1 {
+      left: 0;
+      transform: rotate(0deg) translate(-50px, -6px);
+    }
+
+    .can-2 {
+      left: $can-w;
+      transform: rotate(-14deg) translate(-80px, 8px);
+    }
+
+    .can-3 {
+      left: 2 * $can-w;
+      transform: rotate(-2deg) translate(-120px, -70px);
+      z-index: -1;
+    }
+
+    .can-4 {
+      left: 3 * $can-w;
+      transform: rotate(-2deg) translate(-120px, -20px);
+      z-index: -1;
+    }
+
+    .can-5 {
+      left: 4 * $can-w;
+      transform: rotate(-20deg) translate(-120px, -120px);
+      z-index: -3;
+    }
+  }
+
+  .can-cluster-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30%;
+    width: 100%;
+    z-index: 1;
+
+    .can-6 {
+      right: 0;
+      transform: rotate(3deg) translate(2px, 4px);
+    }
+
+    .can-7 {
+      right: $can-w;
+      transform: rotate(-15deg) translate(2px, 30px);
+    }
+
+    .can-8 {
+      right: 2 * $can-w;
+      transform: rotate(5deg) translate(30px, -30px);
+      z-index: -1;
+    }
+
+    .can-9 {
+      right: 3 * $can-w;
+      transform: rotate(-20deg) translate(50px, 10px);
+      z-index: -1;
+    }
+  }
+}
