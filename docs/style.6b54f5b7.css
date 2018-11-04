@@ -741,6 +741,7 @@ section.partner .partner-promo a {
 }
 section.partner .partner-promo img {
   width: 200px;
+  height: 240px;
 }
 @media (max-width: 650px) {
   section.partner .partner-promo img {
@@ -756,6 +757,13 @@ section.partner .partner-count {
 section.partner .partner-count img {
   display: block;
   width: 200px;
+  height: 214.2857142857px;
+}
+@media (max-width: 650px) {
+  section.partner .partner-count img {
+    width: 130px;
+    height: 214.2857142857px;
+  }
 }
 section.partner .partner-count em {
   font-size: 80px;
@@ -765,9 +773,6 @@ section.partner .partner-count em {
     top: 350px;
     right: -20px;
     font-size: 30px;
-  }
-  section.partner .partner-count img {
-    width: 130px;
   }
   section.partner .partner-count em {
     font-size: 60px;

@@ -56,7 +56,9 @@ section.partner {
     }
 
     img {
+      $wh: 125px / 150px;
       width: 200px;
+      height: 200px / $wh;
 
       @media (max-width: $break-small) {
         width: 150px;
@@ -71,8 +73,16 @@ section.partner {
     font-size: 48px;
 
     img {
+      $wh: 140px / 150px;
+
       display: block;
       width: 200px;
+      height: 200px / $wh;
+
+      @media (max-width: $break-small) {
+        width: 130px;
+        height: 200px / $wh;
+      }
     }
 
     em {
@@ -83,10 +93,6 @@ section.partner {
       top: 350px;
       right: -20px;
       font-size: 30px;
-
-      img {
-        width: 130px;
-      }
 
       em {
         font-size: 60px;
