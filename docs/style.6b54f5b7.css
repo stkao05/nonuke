@@ -401,6 +401,9 @@ body.dialog-on {
   font-weight: 700;
   font-size: 20;
 }
+.summary:hover {
+  color: #FF328B;
+}
 
 .doyouknow {
   display: flex;
@@ -546,7 +549,7 @@ body.dialog-on {
   text-align: left;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 30;
 }
 
 .qa-content {
@@ -736,7 +739,6 @@ section.partner .partner-promo h4 {
   padding: 0.5em 1em;
 }
 section.partner .partner-promo a {
-  color: black;
   text-decoration: none;
 }
 section.partner .partner-promo img {
@@ -1124,8 +1126,8 @@ main {
 .plea {
   color: white;
   padding: 30px;
-  max-width: 550px;
-  margin: 0 auto 100px auto;
+  max-width: 750px;
+  margin: 0 auto 0px auto;
   position: relative;
 }
 .plea .plea-bg {

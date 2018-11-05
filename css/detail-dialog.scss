@@ -79,4 +79,8 @@ body.dialog-on {
 	margin-bottom: 0.5em;
 
   @include regular-bold;
+
+  &:hover {
+    color: $link-color;
+  }
 }

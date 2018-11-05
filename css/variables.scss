@@ -25,6 +25,12 @@ $break-small: 650px;
   font-size: 50;
 }
 
+@mixin header-text-regular {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30;
+}
+
 @mixin header-text-sm {
   font-style: normal;
   font-weight: 700;
