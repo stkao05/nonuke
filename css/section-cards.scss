@@ -50,6 +50,10 @@
   h2 {
     text-align: left;
     @include header-text-regular;
+
+    @media (max-width: $break-small) {
+      font-size: 25px;
+    }
   }
 }
 

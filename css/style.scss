@@ -56,10 +56,10 @@ a {
   }
 
   @media (max-width: $break-small) {
-    font-size: 30px;
+    font-size: 25px;
 
     em {
-      font-size: 50px;
+      font-size: 40px;
     }
   }
 }
@@ -69,6 +69,14 @@ a {
 
   color: #F15A24;
   margin-bottom: 0.5em;
+}
+
+.headline-from {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  width: 100%;
 }
 
 main {
@@ -101,8 +109,6 @@ main {
     margin-bottom: 40px;
   }
 }
-
-
 
 .plea {
   color: white;
@@ -176,17 +182,73 @@ main {
 
 .section-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   a {
     width: 30%;
     max-width: 150px;
     display: inline-block;
+    margin: 0px 20px;
   }
 
   img {
     width: 100%;
     margin: 0 auto;
+  }
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h6 {
+    color: $main-color;
+
+    @include regular-bold;
+
+    margin-bottom: 1em;
+  }
+
+  .about {
+    width: 30%;
+    padding: 0 5px;
+
+    @media (max-width: 1000px) {
+      width: 90%;
+    }
+  }
+
+  .thanks {
+    width: 30%;
+    padding: 0 5px;
+
+    @media (max-width: 1000px) {
+      width: 90%;
+    }
+  }
+
+  .subscription {
+    padding: 0 5px;
+
+    @media (max-width: 1000px) {
+      width: 90%;
+    }
   }
 }

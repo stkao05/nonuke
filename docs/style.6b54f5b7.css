@@ -551,6 +551,11 @@ html.dialog-on {
   font-weight: 400;
   font-size: 30;
 }
+@media (max-width: 650px) {
+  .qa header h2 {
+    font-size: 25px;
+  }
+}
 
 .qa-content {
   padding: 0 50px;
@@ -669,6 +674,7 @@ html.dialog-on {
   }
   .section-wants ul h6.on-small {
     display: block;
+    font-size: 20px;
   }
 }
 .section-wants ul p {
@@ -827,6 +833,11 @@ section.partner .partner-count em {
   text-align: center;
   z-index: 10;
 }
+@media (min-width: 650px) {
+  .main-banner .headline {
+    transform: translate(20px, 0);
+  }
+}
 .main-banner .headline span {
   background-color: #F8CD47;
 }
@@ -864,6 +875,7 @@ section.partner .partner-count em {
 }
 .main-banner .hand {
   position: absolute;
+  z-index: -10;
 }
 @media (min-width: 650px) {
   .main-banner .hand {
@@ -883,6 +895,8 @@ section.partner .partner-count em {
   position: absolute;
   width: 1000px;
   height: 500px;
+  max-width: 100%;
+  z-index: -10;
 }
 @media (min-width: 650px) {
   .main-banner .splash {
@@ -1075,10 +1089,10 @@ a:hover {
 }
 @media (max-width: 650px) {
   .h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .h1 em {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
@@ -1088,6 +1102,14 @@ a:hover {
   font-size: 20px;
   color: #F15A24;
   margin-bottom: 0.5em;
+}
+
+.headline-from {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  width: 100%;
 }
 
 main {
@@ -1189,15 +1211,69 @@ main {
 
 .section-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .section-links a {
   width: 30%;
   max-width: 150px;
   display: inline-block;
+  margin: 0px 20px;
 }
 .section-links img {
   width: 100%;
   margin: 0 auto;
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  footer {
+    flex-direction: column;
+  }
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+footer p {
+  font-size: 15px;
+}
+footer h6 {
+  color: #F8CD47;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20;
+  margin-bottom: 1em;
+}
+footer .about {
+  width: 30%;
+  padding: 0 5px;
+}
+@media (max-width: 1000px) {
+  footer .about {
+    width: 90%;
+  }
+}
+footer .thanks {
+  width: 30%;
+  padding: 0 5px;
+}
+@media (max-width: 1000px) {
+  footer .thanks {
+    width: 90%;
+  }
+}
+footer .subscription {
+  padding: 0 5px;
+}
+@media (max-width: 1000px) {
+  footer .subscription {
+    width: 90%;
+  }
 }
