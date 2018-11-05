@@ -5,7 +5,7 @@ delegate(
     ".details-dialog .summary",
     "click",
     function(e) {
-        addClass(document.body, "dialog-on")
+        addClass(document.documentElement, "dialog-on")
         const detail = closest(e.delegateTarget, ".details-dialog")
         addClass(detail, "on")
     },
@@ -18,7 +18,7 @@ delegate(
     function(e) {
         const detail = closest(e.delegateTarget, ".details-dialog")
         removeClass(detail, "on")
-        removeClass(document.body, "dialog-on")
+        removeClass(document.documentElement, "dialog-on")
     },
     false
 )

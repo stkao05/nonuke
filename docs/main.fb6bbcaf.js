@@ -225,14 +225,14 @@ var _closest = _interopRequireDefault(require("./closest"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _delegate.default)(".details-dialog .summary", "click", function (e) {
-  addClass(document.body, "dialog-on");
+  addClass(document.documentElement, "dialog-on");
   var detail = (0, _closest.default)(e.delegateTarget, ".details-dialog");
   addClass(detail, "on");
 }, false);
 (0, _delegate.default)(".details-dialog .overlay, .details-dialog .dialog-close", "click", function (e) {
   var detail = (0, _closest.default)(e.delegateTarget, ".details-dialog");
   removeClass(detail, "on");
-  removeClass(document.body, "dialog-on");
+  removeClass(document.documentElement, "dialog-on");
 }, false);
 
 function hasClass(el, className) {

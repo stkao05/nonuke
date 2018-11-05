@@ -330,7 +330,7 @@ template {
   display: none;
 }
 
-body.dialog-on {
+html.dialog-on {
   overflow: hidden;
 }
 
