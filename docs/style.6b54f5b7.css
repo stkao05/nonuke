@@ -419,7 +419,7 @@ html.dialog-on {
 }
 @media (max-width: 650px) {
   .doyouknow img {
-    margin-right: -240px;
+    margin-right: -180px;
   }
 }
 .doyouknow .doyouknow-left {
@@ -1052,6 +1052,7 @@ html {
 
 body {
   width: 100%;
+  overflow-x: hidden;
   background-color: #F8CD47;
 }
 
@@ -1152,6 +1153,11 @@ main {
   margin: 0 auto 0px auto;
   position: relative;
 }
+@media (max-width: 600px) {
+  .plea {
+    padding: 0;
+  }
+}
 .plea .plea-bg {
   position: absolute;
   top: 0;
@@ -1203,10 +1209,20 @@ main {
   top: 60px;
   left: 50%;
 }
+@media (max-width: 650px) {
+  .qa-list-head .label-worry {
+    width: 150px;
+  }
+}
 .qa-list-head .label-question {
   position: absolute;
   top: 0px;
-  left: 70%;
+  left: 55%;
+}
+@media (max-width: 650px) {
+  .qa-list-head .label-question {
+    width: 150px;
+  }
 }
 
 .section-links {
