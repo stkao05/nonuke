@@ -28,7 +28,6 @@
   .side-slogan {
     width: 25%;
     position: absolute;
-    top: -10%;
     right: 0;
 
     @media (max-width: $break-small) {
@@ -57,6 +56,15 @@
       bottom: 80px;
       width: auto;
     }
+  }
+
+  .headline-from {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+    @include regular-bold;
   }
 
   .header-text {

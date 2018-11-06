@@ -1,6 +1,7 @@
 @import "./variables.scss";
 
 html.dialog-on {
+  height: 100%;
   overflow: hidden;
 }
 
@@ -39,7 +40,8 @@ html.dialog-on {
       left: 0;
       bottom: 0;
       z-index: 100;
-      overflow: auto;
+      overflow-y: scroll;
+      overflow-x: hidden;
     }
 
     .overlay {

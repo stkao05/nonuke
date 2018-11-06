@@ -72,13 +72,6 @@ a {
   margin-bottom: 0.5em;
 }
 
-.headline-from {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  text-align: center;
-  width: 100%;
-}
 
 main {
   display: block;
@@ -120,6 +113,8 @@ main {
 
   @media (max-width: 600px) {
     padding: 0;
+    width: 120%;
+    transform: translate(-10%, 0);
   }
 
   .plea-bg {

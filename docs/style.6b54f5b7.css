@@ -331,6 +331,7 @@ template {
 }
 
 html.dialog-on {
+  height: 100%;
   overflow: hidden;
 }
 
@@ -364,7 +365,8 @@ html.dialog-on {
   left: 0;
   bottom: 0;
   z-index: 100;
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .details-dialog.on .overlay {
   display: block;
@@ -817,7 +819,6 @@ section.partner .partner-count em {
 .main-banner .side-slogan {
   width: 25%;
   position: absolute;
-  top: -10%;
   right: 0;
 }
 @media (max-width: 650px) {
@@ -847,6 +848,16 @@ section.partner .partner-count em {
     bottom: 80px;
     width: auto;
   }
+}
+.main-banner .headline-from {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20;
 }
 .main-banner .header-text {
   position: absolute;
@@ -1105,14 +1116,6 @@ a:hover {
   margin-bottom: 0.5em;
 }
 
-.headline-from {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  text-align: center;
-  width: 100%;
-}
-
 main {
   display: block;
   margin: 0 auto;
@@ -1156,6 +1159,8 @@ main {
 @media (max-width: 600px) {
   .plea {
     padding: 0;
+    width: 120%;
+    transform: translate(-10%, 0);
   }
 }
 .plea .plea-bg {
