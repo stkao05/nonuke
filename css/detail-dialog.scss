@@ -3,6 +3,21 @@
 html.dialog-on {
   height: 100%;
   overflow: hidden;
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+}
+
+.overlay {
+  display: none;
 }
 
 .details-dialog {
@@ -10,9 +25,6 @@ html.dialog-on {
     display: none;
   }
 
-  .overlay {
-    display: none;
-  }
 
   &.on {
     .dialog-close, .dialog-close-dark {
@@ -44,20 +56,9 @@ html.dialog-on {
       overflow-x: hidden;
     }
 
-    .overlay {
-      display: block;
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      z-index: 100;
-      overflow: auto;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: -1;
-    }
   }
 }
+
 
 /********** site style ************/
 

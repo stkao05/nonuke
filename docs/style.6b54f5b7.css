@@ -334,11 +334,22 @@ html.dialog-on {
   height: 100%;
   overflow: hidden;
 }
+html.dialog-on .overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 
-.details-dialog .dialog {
+.overlay {
   display: none;
 }
-.details-dialog .overlay {
+
+.details-dialog .dialog {
   display: none;
 }
 .details-dialog.on .dialog-close, .details-dialog.on .dialog-close-dark {
@@ -367,18 +378,6 @@ html.dialog-on {
   z-index: 100;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-.details-dialog.on .overlay {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 100;
-  overflow: auto;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
 }
 
 /********** site style ************/

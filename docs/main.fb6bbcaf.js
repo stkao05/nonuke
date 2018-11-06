@@ -229,10 +229,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var detail = (0, _closest.default)(e.delegateTarget, ".details-dialog");
   addClass(detail, "on");
 }, false);
-(0, _delegate.default)(".details-dialog .overlay, .details-dialog .dialog-close", "click", function (e) {
-  var detail = (0, _closest.default)(e.delegateTarget, ".details-dialog");
+(0, _delegate.default)(".details-dialog .dialog-close", "click", function (e) {
+  var detail = document.querySelector(".details-dialog.on");
   removeClass(detail, "on");
   removeClass(document.documentElement, "dialog-on");
+}, false);
+(0, _delegate.default)(".details-dialog .dialog", "click", function (e) {
+  var detail = document.querySelector(".details-dialog.on");
+  var content = document.querySelector(".details-dialog.on .dialog-content");
+  var rect = content.getBoundingClientRect();
+
+  if (e.clientX < rect.left || e.clientX > rect.right) {
+    removeClass(detail, "on");
+    removeClass(document.documentElement, "dialog-on");
+  }
 }, false);
 
 function hasClass(el, className) {
@@ -277,7 +287,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49299" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58450" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

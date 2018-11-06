@@ -13,12 +13,30 @@ delegate(
 )
 
 delegate(
-    ".details-dialog .overlay, .details-dialog .dialog-close",
+    ".details-dialog .dialog-close",
     "click",
     function(e) {
-        const detail = closest(e.delegateTarget, ".details-dialog")
+        var detail = document.querySelector(".details-dialog.on")
         removeClass(detail, "on")
         removeClass(document.documentElement, "dialog-on")
+    },
+    false
+)
+
+delegate(
+    ".details-dialog .dialog",
+    "click",
+    function(e) {
+        var detail = document.querySelector(".details-dialog.on")
+        var content = document.querySelector(
+            ".details-dialog.on .dialog-content"
+        )
+        var rect = content.getBoundingClientRect()
+
+        if (e.clientX < rect.left || e.clientX > rect.right) {
+            removeClass(detail, "on")
+            removeClass(document.documentElement, "dialog-on")
+        }
     },
     false
 )
