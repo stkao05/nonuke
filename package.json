@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "parcel --out-dir ./.dev ./index.njk",
-        "build": "parcel build --out-dir ./docs  --public-url https://stkao05.github.io/nonuke/ ./index.njk"
+        "build": "parcel build --out-dir ./docs ./index.njk"
     },
     "author": "",
     "license": "ISC",
