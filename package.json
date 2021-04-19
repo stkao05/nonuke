@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "parcel --out-dir ./docs ./index.njk",
-        "build": "parcel build --out-dir ./docs ./index.njk"
+        "dev": "parcel --out-dir ./.dev ./index.njk",
+        "build": "parcel build --out-dir ./docs  --public-url ./nonuke/ ./index.njk"
     },
     "author": "",
     "license": "ISC",
@@ -14,9 +14,9 @@
         "@babel/preset-env": "^7.1.0",
         "@babel/register": "^7.0.0",
         "nunjucks": "^3.1.3",
-        "parcel-plugin-nunjucks": "^1.0.0",
         "parcel-bundler": "^1.10.3",
         "parcel-plugin-compress": "^1.0.6",
+        "parcel-plugin-nunjucks": "^1.0.0",
         "sass": "^1.14.3"
     },
     "compress": {
